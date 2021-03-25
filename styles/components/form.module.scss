@@ -1,0 +1,16 @@
+#formComponent {
+    color: white;
+    background-color: rgb(35, 35, 156);
+    min-width: 220px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    input{
+        width: 80%;
+        margin: 0 auto;
+    }
+    label{
+        position: relative;
+        left: 10%;
+    }
+}
