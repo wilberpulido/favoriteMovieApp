@@ -12,5 +12,12 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "1.32.8"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.23.1",
+    "standard": "16.0.3"
+  },
+  "eslintConfig": { 
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
