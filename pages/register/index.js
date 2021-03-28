@@ -1,5 +1,5 @@
 import Form from '../../components/Form'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Register () {
   const [user, setUser] = useState({
@@ -8,12 +8,6 @@ export default function Register () {
     email: '',
     password: ''
   })
-  useEffect(() => {
-    console.log(user.firstName)
-    console.log(user.lastName)
-    console.log(user.email)
-    console.log(user.password)
-  }, [user])
   function handlerInputChange (e) {
     setUser({
       ...user,
@@ -22,10 +16,11 @@ export default function Register () {
   }
   async function handlerSubmit (e) {
     e.preventDefault()
+
     // eslint-disable-next-line no-undef
-    fetch('localhost:5000/api/auth/register', {
+    fetch('http://localhost:5000/api/auth/register', {
       method: 'POST',
-      body: JSON.stringify(user),
+      body: JSON.stringify({ user }.user),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -36,7 +31,7 @@ export default function Register () {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Form onSubmit={handlerSubmit}>
+        <Form>
           <label>First Name:</label>
           <input name='firstName' onChange={handlerInputChange} />
           <label>Last Name: </label>
@@ -45,7 +40,7 @@ export default function Register () {
           <input name='email' onChange={handlerInputChange} />
           <label> Password: </label>
           <input name='password' type='password' onChange={handlerInputChange} />
-          <button>Enviar</button>
+          <button onClick={handlerSubmit}>Enviar</button>
         </Form>
       </div>
     </div>
