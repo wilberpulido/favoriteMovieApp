@@ -18,7 +18,7 @@ export default function Register () {
     e.preventDefault()
 
     // eslint-disable-next-line no-undef
-    fetch('http://localhost:5000/api/auth/register', {
+    fetch(`${process.env.NEXT_PUBLIC_HOST}/api/auth/register`, {
       method: 'POST',
       body: JSON.stringify({ user }.user),
       headers: {

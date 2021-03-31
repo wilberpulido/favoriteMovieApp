@@ -1,13 +1,48 @@
 @use '../variable/basics';
+@use '../variable/colors';
+
 
 .container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  background-color: colors.$primary;
+  div{
+    width: 100px;
+    height: 100px;
+    margin: 0 50px;
+  }
 }
-
+.box1{
+  background-color: colors.$softerPrimary;
+}
+.box2{
+  background-color: colors.$softPrimary;
+}
+.box3{
+  background-color: colors.$primary;
+}
+.box4{
+  background-color: colors.$strongPrimary;
+}
+.box5{
+  background-color: colors.$strogestPrimaty;
+}
+.box6{
+  background-color: colors.$softerSecondary;
+}
+.box7{
+  background-color: colors.$softSecondary;
+}
+.box8{
+  background-color: colors.$secondary;
+}
+.box9{
+  background-color: colors.$strongSecondary;
+}
+.box10{
+  background-color: colors.$strogestSecondary;
+}
 .main {
   padding: 5rem 0;
   flex: 1;
