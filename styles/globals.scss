@@ -1,9 +1,38 @@
+@use 'variable/fonts';
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: fonts.$fontFamilylTitle;
+
+}
+h1{
+  font-size: fonts.$fontSizeXXL;
+}
+h2{
+  font-size: fonts.$fontSizeXL;
+}
+h3{
+  font-size: fonts.$fontSizeL;
+}
+h4{
+  font-size: fonts.$fontSizeM;
+}
+h5{
+  font-size:fonts.$fontSizeS;
+}
+p{
+  font-family: fonts.$fontFamilylContent;
+  font-size: fonts.$fontSizeContent;
+}
+small{
+  font-size:fonts.$fontSizeHints;
 }
 
 a {

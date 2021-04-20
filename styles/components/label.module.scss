@@ -1,0 +1,9 @@
+@use '../variable/fonts';
+
+
+.label{
+    font-family: fonts.$fontFamilylContent;
+    font-size: fonts.$fontSizeContent;
+    background-color: yellowgreen;
+    width: max-content;
+}

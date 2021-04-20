@@ -1,29 +1,21 @@
 import Head from 'next/head'
 import styles from '../styles/pages/Home.module.scss'
+import Form from '../components/Form'
+import Label from '../components/Label'
 
 export default function Home () {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>Favorite Movie</title>
+        <link rel='icon' href='/film-solid.svg' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link href='https://fonts.googleapis.com/css2?family=Nunito&family=Tillana&display=swap' rel='stylesheet' />
       </Head>
-      HOME
-      <div>
-        <div className={styles.box1} />
-        <div className={styles.box2} />
-        <div className={styles.box3} />
-        <div className={styles.box4} />
-        <div className={styles.box5} />
-      </div>
-      <div>
-        <div className={styles.box6} />
-        <div className={styles.box7} />
-        <div className={styles.box8} />
-        <div className={styles.box9} />
-        <div className={styles.box10} />
-
-      </div>
+      <Form className='dataForm' titleForm='Create Account'>
+        <Label htmlFor='firtsName'>Firts Name</Label>
+        <input name='firtsName' id='firtsName' placeholder='Wilber' type='text' />
+      </Form>
 
     </div>
   )
