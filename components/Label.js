@@ -2,7 +2,7 @@ import style from '../styles/components/label.module.scss'
 
 export default function Label (props) {
   return (
-    <label className={style.label} htmlFor={props.htmlFor}>
+    <label className={style.labelClass} htmlFor={props.htmlFor}>
       {props.children}
     </label>
   )

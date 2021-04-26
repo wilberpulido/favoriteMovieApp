@@ -1,9 +1,9 @@
 @use '../variable/fonts';
 
-
-.label{
+.labelClass{
     font-family: fonts.$fontFamilylContent;
     font-size: fonts.$fontSizeContent;
     background-color: yellowgreen;
     width: max-content;
+    height: max-content;
 }

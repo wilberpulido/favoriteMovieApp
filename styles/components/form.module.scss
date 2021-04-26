@@ -6,12 +6,26 @@
     background-color: colors.$strongPrimary;
     border-radius: 5px;
     padding: 40px 15px;
-    min-width: 220px;
+    min-width: 280px;
     width: 80%;
     height: max-content;
-    // display: flex;
-    // flex-direction: column;
     margin: 60px auto;
+}
+.contentForm{
+    background-color: firebrick;
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 35% 60%;
+    grid-template-rows: 30px;
+    grid-gap: 20px 5%;
+    .boxLabel{
+        position: relative;
+        label{
+            background-color: khaki;
+            position: absolute;
+            right:0px;
+        }
+    }
     
-
 }
