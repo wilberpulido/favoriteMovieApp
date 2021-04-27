@@ -1,5 +1,25 @@
 .headerForm{
-    h3{
-        margin: 0;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    grid-gap: 5%;
+    grid-template-rows: max-content;
+    margin-bottom: 30px;
+    div{
+        display: flex;
+        align-items: center;
+        .iconDataForm{
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
+        h5{
+            margin: 0;
+        }
+    }
+    div:nth-child(1){
+        justify-content: flex-end;
+    }
+    div:nth-child(2){
+        justify-content: flex-start;
     }
 }

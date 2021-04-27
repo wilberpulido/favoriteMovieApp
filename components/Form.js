@@ -1,18 +1,22 @@
 import style from '../styles/components/form.module.scss'
 import HeaderForm from './HeaderForm'
 
-export default function Form (props) {
-  if (props.titleForm) {
+export default function Form ({ titleForm, classNameForm, classNameContentForm, iconSrc, children }) {
+  if (titleForm) {
     return (
-      <form className={style[props.className]}>
-        <HeaderForm title={props.titleForm} />
-        {props.children}
+      <form className={style[classNameForm]}>
+        <HeaderForm iconSrc={iconSrc}>
+          {titleForm}
+        </HeaderForm>
+        <div className={style[classNameContentForm]}>
+          {children}
+        </div>
       </form>
     )
   }
   return (
-    <form className={style[props.className]}>
-      {props.children}
+    <form className={style[classNameForm]}>
+      {children}
     </form>
   )
 }

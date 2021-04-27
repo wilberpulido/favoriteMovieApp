@@ -1,17 +1,29 @@
 @use '../variable/colors';
+@use '../components/button.module.scss';
 
 .dataForm {
     position: relative;
     color: white;
     background-color: colors.$strongPrimary;
     border-radius: 5px;
-    padding: 40px 15px;
-    min-width: 220px;
+    padding: 30px 15px;
+    min-width: 270px;
     width: 80%;
     height: max-content;
-    // display: flex;
-    // flex-direction: column;
     margin: 60px auto;
-    
-
+}
+.register{
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 35% 60%;
+    grid-template-rows: repeat(4, 30px) 70px;
+    grid-gap: 20px 5%;
+    div:nth-child(9){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
