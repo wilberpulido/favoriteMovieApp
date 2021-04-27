@@ -1,8 +1,13 @@
-.inputClass{
-    width: 100%;
-    max-width: 220px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    background-color: #5EADF2;
+.inputBox{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+    .inputClass{
+        width: 100%;
+        max-width: 220px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        background-color: #5EADF2;
+    }
 }

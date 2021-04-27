@@ -1,9 +1,11 @@
 import style from '../styles/components/label.module.scss'
 
-export default function Label (props) {
+export default function Label ({ children, htmlFor }) {
   return (
-    <label className={style.labelClass} htmlFor={props.htmlFor}>
-      {props.children}
-    </label>
+    <div className={style.labelBox}>
+      <label className={style.labelClass} htmlFor={htmlFor}>
+        {children}
+      </label>
+    </div>
   )
 }

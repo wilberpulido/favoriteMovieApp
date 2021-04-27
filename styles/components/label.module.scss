@@ -1,9 +1,15 @@
 @use '../variable/fonts';
 
-.labelClass{
-    font-family: fonts.$fontFamilylContent;
-    font-size: fonts.$fontSizeContent;
-    background-color: yellowgreen;
-    width: max-content;
-    height: max-content;
+.labelBox {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+width: 100%;
+height: 100%;
+    .labelClass{
+        font-family: fonts.$fontFamilylContent;
+        font-size: fonts.$fontSizeContent;
+        width: max-content;
+        height: max-content;
+    }
 }

@@ -1,21 +1,25 @@
 .headerForm{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 35% 60%;
+    grid-gap: 5%;
     grid-template-rows: max-content;
-    background-color: darkorange;
     margin-bottom: 30px;
     div{
         display: flex;
-        justify-content: center;
         align-items: center;
         .iconDataForm{
             width: 40px;
             height: 40px;
-            background-color: crimson;
+            margin-right: 20px;
         }
         h5{
             margin: 0;
-            background-color: darkmagenta;
         }
+    }
+    div:nth-child(1){
+        justify-content: flex-end;
+    }
+    div:nth-child(2){
+        justify-content: flex-start;
     }
 }

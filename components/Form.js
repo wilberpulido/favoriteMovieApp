@@ -5,8 +5,10 @@ export default function Form ({ titleForm, classNameForm, classNameContentForm, 
   if (titleForm) {
     return (
       <form className={style[classNameForm]}>
-        <HeaderForm title={titleForm} iconSrc={iconSrc} />
-        <div className={style.contentForm}>
+        <HeaderForm iconSrc={iconSrc}>
+          {titleForm}
+        </HeaderForm>
+        <div className={style[classNameContentForm]}>
           {children}
         </div>
       </form>
