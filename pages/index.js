@@ -4,6 +4,7 @@ import Form from '../components/Form'
 import Label from '../components/Label'
 import Input from '../components/Input'
 import Button from '../components/Button'
+import ExitButton from '../components/ExitButton'
 
 export default function Home () {
   return (
@@ -53,6 +54,7 @@ export default function Home () {
           REGISTER
         </Button>
       </Form>
+      <ExitButton />
 
     </div>
   )

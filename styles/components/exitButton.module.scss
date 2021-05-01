@@ -1,0 +1,17 @@
+@use '../variable/colors';
+
+.exitButtonBox{
+    width: 60px;
+    height: 60px;
+    background-color: colors.$strongPrimary;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .iconExit{
+        color: colors.$secondary;
+        width: 40px;
+        height: 40px;
+    }
+
+}
