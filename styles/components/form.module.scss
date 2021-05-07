@@ -12,18 +12,3 @@
     height: max-content;
     margin: 60px auto;
 }
-.register{
-    width: 100%;
-    display: grid;
-    position: relative;
-    grid-template-columns: 35% 60%;
-    grid-template-rows: repeat(4, 30px) 70px;
-    grid-gap: 20px 5%;
-    div:nth-child(9){
-        grid-column-start: 1;
-        grid-column-end: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}

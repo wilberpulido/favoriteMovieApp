@@ -1,6 +1,6 @@
 import style from '../styles/components/input.module.scss'
 
-export default function Input ({ name, id, placeholder, type }) {
+export default function Input ({ name, id, placeholder, type, handlerChange }) {
   return (
     <div className={style.inputBox}>
       <input
@@ -9,6 +9,7 @@ export default function Input ({ name, id, placeholder, type }) {
         placeholder={placeholder}
         type={type}
         className={style.inputClass}
+        onChange={handlerChange}
       />
     </div>
   )
