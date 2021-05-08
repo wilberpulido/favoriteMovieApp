@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/pages/Home.module.scss'
-import RegisterForm from '../components/registerForm'
+import RegisterForm from '../components/RegisterForm'
+import OverlappingLayer from '../components/OverlappingLayer'
 
 export default function Home () {
   return (
@@ -12,7 +13,9 @@ export default function Home () {
         <link href='https://fonts.googleapis.com/css2?family=Nunito&family=Tillana&display=swap' rel='stylesheet' />
       </Head>
 
-      <RegisterForm />
+      <OverlappingLayer>
+        <RegisterForm />
+      </OverlappingLayer>
 
     </div>
   )
