@@ -1,9 +1,15 @@
-export default class User {
+export default class UserService {
   constructor ({ firstName, lastName, email, password }) {
     this.firstName = firstName
     this.lastName = lastName
     this.email = email
     this.password = password
+    this.user = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password
+    }
   }
 
   getFirstName () {
@@ -14,16 +20,23 @@ export default class User {
     return this.lastName
   }
 
+  getEmail () {
+    return this.email
+  }
+
+  getPassword () {
+    return this.password
+  }
+
   async registerUser () {
     // eslint-disable-next-line no-undef
-    await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/auth/register`, {
+    return await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/auth/register`, {
       method: 'POST',
-      body: JSON.stringify(this.firstName, this.lastName, this.email, this.passwordb),
+      body: JSON.stringify({ ...this.user }),
       headers: {
         'Content-Type': 'application/json'
       }
     })
       .then(res => res.json())
-      .then(response => { console.log(response) })
   }
 }

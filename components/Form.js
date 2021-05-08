@@ -1,8 +1,8 @@
 import style from '../styles/components/form.module.scss'
 
-export default function Form ({ classNameForm, handlerSubmit, children }) {
+export default function Form ({ classNameForm, handlerSubmit, method, children }) {
   return (
-    <form className={style[classNameForm]} onSubmit={handlerSubmit}>
+    <form method={method} className={style[classNameForm]} onSubmit={handlerSubmit}>
       {children}
     </form>
   )

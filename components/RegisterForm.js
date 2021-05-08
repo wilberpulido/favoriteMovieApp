@@ -4,9 +4,10 @@ import Label from './Label'
 import Input from './Input'
 import Button from './Button'
 import style from '../styles/components/registerForm.module.scss'
+import UserService from '../services/UserServices'
 import { useState } from 'react'
 
-export default function FormRegister () {
+export default function RegisterForm () {
   const [user, setUser] = useState({
     firstName: '',
     lastName: '',
@@ -14,14 +15,20 @@ export default function FormRegister () {
     password: ''
   })
 
-  function handlerInputChange (e) {
+  const newUser = new UserService({ ...user })
+
+  const handlerInputChange = (e) => {
     setUser({
       ...user,
       [e.target.name]: e.target.value
     })
   }
   const handlerSubmit = () => {
-    // request for register
+    try {
+      newUser.registerUser()
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -30,7 +37,8 @@ export default function FormRegister () {
       classNameContentForm='register'
       titleForm='Create Account'
       iconSrc='icons/user-circle-solid.svg'
-      handlerSubmit={handlerSubmit()}
+      method='POST'
+      handlerSubmit={handlerSubmit}
     >
       <HeaderForm>
         Create Account
@@ -38,7 +46,7 @@ export default function FormRegister () {
       <div className={style.registerForm}>
         <Label htmlFor='firstNameRegister'>First Name:</Label>
         <Input
-          name='firstNameRegister'
+          name='firstName'
           id='firstNameRegister'
           placeholder='Jacop'
           type='text'
@@ -46,7 +54,7 @@ export default function FormRegister () {
         />
         <Label htmlFor='lastNameRegister'>Last Name:</Label>
         <Input
-          name='lastNameRegister'
+          name='lastName'
           id='lastNameRegister'
           placeholder='Smith'
           type='text'
@@ -55,7 +63,7 @@ export default function FormRegister () {
         />
         <Label htmlFor='emailRegister'>Email:</Label>
         <Input
-          name='emailRegister'
+          name='email'
           id='emailRegister'
           placeholder='jacopSmith@gmail.com'
           type='email'
