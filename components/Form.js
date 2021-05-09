@@ -1,21 +1,8 @@
 import style from '../styles/components/form.module.scss'
-import HeaderForm from './HeaderForm'
 
-export default function Form ({ titleForm, classNameForm, classNameContentForm, iconSrc, children }) {
-  if (titleForm) {
-    return (
-      <form className={style[classNameForm]}>
-        <HeaderForm iconSrc={iconSrc}>
-          {titleForm}
-        </HeaderForm>
-        <div className={style[classNameContentForm]}>
-          {children}
-        </div>
-      </form>
-    )
-  }
+export default function Form ({ classNameForm, handlerSubmit, method, children }) {
   return (
-    <form className={style[classNameForm]}>
+    <form method={method} className={style[classNameForm]} onSubmit={handlerSubmit}>
       {children}
     </form>
   )

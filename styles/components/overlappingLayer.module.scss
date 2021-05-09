@@ -1,0 +1,25 @@
+@use '../variable/colors';
+
+.baseLayer{
+    min-height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-color: colors.$distortedPrimary;
+    .childrenOverlappingBox{
+        position: relative;
+        top: 60px;
+        margin: 0 auto;
+        width: min-content;
+        height: min-content;
+        .exitButtonBox{
+            position: relative;
+            top: 20px;
+            margin: auto;
+            background-color: darkblue;
+            width: min-content;
+            height: min-content;
+        }
+    }
+
+
+}

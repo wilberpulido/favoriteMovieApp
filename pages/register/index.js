@@ -18,15 +18,6 @@ export default function Register () {
     e.preventDefault()
 
     // eslint-disable-next-line no-undef
-    fetch(`${process.env.NEXT_PUBLIC_HOST}/api/auth/register`, {
-      method: 'POST',
-      body: JSON.stringify({ user }.user),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(res => res.json())
-      .then(response => { console.log(response) })
   }
   return (
     <div>
