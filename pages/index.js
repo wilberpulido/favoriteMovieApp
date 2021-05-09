@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/pages/Home.module.scss'
-import RegisterForm from '../components/RegisterForm'
+import LoginForm from '../components/LoginForm'
 import OverlappingLayer from '../components/OverlappingLayer'
 
 export default function Home () {
@@ -14,7 +14,7 @@ export default function Home () {
       </Head>
 
       <OverlappingLayer>
-        <RegisterForm />
+        <LoginForm />
       </OverlappingLayer>
 
     </div>

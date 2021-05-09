@@ -34,8 +34,6 @@ export default function RegisterForm () {
   return (
     <Form
       classNameForm='dataForm'
-      classNameContentForm='register'
-      titleForm='Create Account'
       iconSrc='icons/user-circle-solid.svg'
       method='POST'
       handlerSubmit={handlerSubmit}
@@ -72,7 +70,7 @@ export default function RegisterForm () {
         <Label htmlFor='password'>Password:</Label>
         <Input
           name='password'
-          id='password'
+          id='passwordRegister'
           placeholder='password'
           type='password'
           handlerChange={handlerInputChange}
