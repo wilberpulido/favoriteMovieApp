@@ -1,0 +1,16 @@
+.loginForm{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    grid-template-rows: repeat(2, 30px) 70px;
+    grid-gap: 20px 5%;
+    div:nth-child(5){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
