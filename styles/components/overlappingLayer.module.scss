@@ -12,9 +12,9 @@
         width: min-content;
         height: min-content;
         .exitButtonBox{
-            position: relative;
-            top: 20px;
-            margin: auto;
+            position: fixed;
+            top: 80%;
+            left: calc((100% / 2) - 30px);
             width: min-content;
             height: min-content;
         }
