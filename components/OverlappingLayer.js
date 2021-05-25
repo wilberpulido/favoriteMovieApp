@@ -9,6 +9,7 @@ export default function OverlappingLayer ({ children }) {
         <div className={style.exitButtonBox}>
           <ExitButton />
         </div>
+
       </div>
     </main>
   )
